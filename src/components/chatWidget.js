@@ -57,7 +57,7 @@ const ChatWidget = () => {
     <>
     {isOpen && <div className="chat-widget">
     <div className="chat-header">
-        <h2>Chat</h2> 
+        <h2>Need help?</h2> 
         <button className="close-button" onClick={handleClose}>
            X
         </button>
