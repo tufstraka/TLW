@@ -8,6 +8,7 @@
     text-align: center;
     margin-bottom: 50px;
     font-size: 36px;
+    text-decoration: underline;
     font-weight: 600;
   }
   
@@ -20,7 +21,8 @@
   }
   
   .how-it-works__step {
-    width: calc(33.33% - 20px);
+    width: 300px;
+    height: 280px;
     margin: 30px;
     padding: 20px;
     background-color: #FFFFFF;
@@ -57,4 +59,11 @@
   .how-it-works__step-description {
     font-size: 18px;
     line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .how-it-works__steps {
+      flex-direction: column;
+      align-items: center;
+    }
   }

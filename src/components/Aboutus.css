@@ -1,0 +1,48 @@
+.about-us-container {
+    width: 90vw;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  .about-us-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-container p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .team-member {
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  

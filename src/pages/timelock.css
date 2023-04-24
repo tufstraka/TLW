@@ -17,7 +17,7 @@ div {
   form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 24px;
@@ -45,7 +45,7 @@ div {
 
   button {
     background-color: #008CBA;
-    width:100%;
+    width: 100%;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -73,4 +73,11 @@ div {
   .TimeLock{
     color:#0077B6;
     font-weight: 900;
+  }
+
+  @media (max-width: 768px) {
+    form {
+      width: 100%;
+      margin: 40px;
+    }
   }

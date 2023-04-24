@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPersonCirclePlus} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import './chatWidget.css';
 
@@ -6,7 +8,8 @@ const ChatWidget = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [responses, setResponses] = useState([]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isWidgetOpen, setIsWidgetOpen] = useState(true);
 
   const apiKey = process.env.REACT_APP_RAPIDAPI_KEY;
 
@@ -20,8 +23,15 @@ const ChatWidget = () => {
       handleSendMessage();
     }
   };
+
+  const handleWidgetClick = () => {
+    setIsWidgetOpen(!isWidgetOpen);
+    setIsChatOpen(!isChatOpen);
+  }
+
   const handleClose = () => {
-    setIsOpen(false);
+    setIsChatOpen(!isChatOpen);
+    setIsWidgetOpen(!isWidgetOpen);
   };
 
   const handleSendMessage = async () => {
@@ -55,7 +65,9 @@ const ChatWidget = () => {
   return (
 
     <>
-    {isOpen && <div className="chat-widget">
+    {isWidgetOpen && <div className="chat-widget-head" onClick={handleWidgetClick}>
+   <FontAwesomeIcon icon={faPersonCirclePlus} beat /></div>}
+    {isChatOpen && <div className="chat-widget">
     <div className="chat-header">
         <h2>Need help?</h2> 
         <button className="close-button" onClick={handleClose}>

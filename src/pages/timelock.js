@@ -4,6 +4,7 @@ import Web3 from 'web3';
 import TimeLockWallet from '../contracts/TimeLockWallet.json';
 import ChatWidget from '../components/chatWidget';
 import HowItWorks from '../components/HowItWorks';
+import FAQ from '../components/FAQ';
 
 function Timelock() {
   const [releaseTime, setReleaseTime] = useState('');
@@ -120,6 +121,7 @@ function Timelock() {
         </div>
         <button type="submit">Lock Funds</button>
       </form>
+      <FAQ/>
       <ChatWidget/>
     </div>
   );
