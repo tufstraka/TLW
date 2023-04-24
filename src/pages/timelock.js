@@ -3,6 +3,7 @@ import './timelock.css'
 import Web3 from 'web3';
 import TimeLockWallet from '../contracts/TimeLockWallet.json';
 import ChatWidget from '../components/chatWidget';
+import HowItWorks from '../components/HowItWorks';
 
 function Timelock() {
   const [releaseTime, setReleaseTime] = useState('');
@@ -95,10 +96,14 @@ function Timelock() {
 
   return (
     <div>
-      <h1>Time Lock Wallet</h1>
+      <h1><span className='TimeLock'>Time Lock</span> Wallet</h1>
+
       <div className='account'>
         <p><span>Account - </span> {account}</p>
       </div>
+      
+      <HowItWorks/>
+      
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="hodlerAddress">Address to send funds</label>
