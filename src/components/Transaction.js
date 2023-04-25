@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
 
-function Transaction( status, sender, recipient ) {
+function Transaction( status, sender, receiver ) {
   return (
     <div>
       <p>{sender}</p>
-      <p>{recipient}</p>
+      <p>{receiver}</p>
       <p>{status}</p>
       {status.startsWith('Transaction') && (
         <p>
