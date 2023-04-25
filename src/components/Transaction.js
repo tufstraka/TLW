@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import Web3 from 'web3';
+import React from 'react';
 
+//ToDo:  Finish working on this component
 function Transaction( status, sender, receiver ) {
+  
+  //const transactionHash = status.split(': ')[1];
+
+
   return (
     <div>
       <p>{sender}</p>
       <p>{receiver}</p>
-      <p>{status}</p>
-      {status.startsWith('Transaction') && (
+      {/*<p>{status}</p>
         <p>
           View transaction on Etherscan:{' '}
-          <a href={`https://etherscan.io/tx/${status.split(': ')[1]}`} target="_blank" rel="noopener noreferrer">{status.split(': ')[1]}</a>>
-        </p>
-      )}
+          <a href={`https://etherscan.io/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer">{status.split(': ')[1]}</a>
+  </p>*/}
+      
     </div>
   );
 }

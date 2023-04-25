@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './timelock.css'
 import Web3 from 'web3';
 import TimeLockWallet from '../contracts/TimeLockWallet.json';
-import ChatWidget from '../components/chatWidget';
-import HowItWorks from '../components/HowItWorks';
-import FAQ from '../components/FAQ';
-import Transaction from '../components/Transaction';
+import HowItWorks from './HowItWorks';
 
 function Timelock() {
   const [releaseTime, setReleaseTime] = useState('');
@@ -39,6 +36,7 @@ function Timelock() {
     
   }, []);
   
+    // ToDo: use a testnet for development
     // Load TimeLockWallet contract on web3 instance update
   useEffect(() => {
     async function loadContract() {
@@ -92,7 +90,14 @@ function Timelock() {
 
     const amountInWei = web3.utils.toWei(amount);
 
-    const tx = await contract.methods.sendFunds(address, releaseTime).send({
+    //Temporarily set status to pending while I work on the smart contract
+
+    setStatus(`Pending transaction... Amount: ${amountInWei} Wei || Receiver: ${address} || Release Time: ${releaseTime}`);
+
+
+    // TODO: Call the smart contract's sendFunds function
+
+    /*const tx = await contract.methods.sendFunds(address, releaseTime).send({
       from: account,
       value: amountInWei
     }).on('transactionHash', (hash) => {
@@ -105,19 +110,17 @@ function Timelock() {
         setStatus(`Transaction failed: ${error.message}`);
       });
 
-    console.log(tx);
+    console.log(tx);*/
   }
 
   return (
-    <div>
-      <h1><span className='TimeLock'>Time Lock</span> Wallet</h1>
+    <div className='TimeLockContainer'>
+      <h1><span className='TimeLockHeader'>Time Lock</span> Wallet</h1>
 
       <div className='account'>
         <p><span>Account - </span> {account}</p>
       </div>
-      
       <HowItWorks/>
-      
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="hodlerAddress">Address to send funds</label>
@@ -129,14 +132,12 @@ function Timelock() {
           <input type="datetime-local" id="releaseTime" value={releaseTime} onChange={handleReleaseTimeChange} />
         </div>
         <div>
-          <label htmlFor="amount">Amount (Wei):</label>
+          <label htmlFor="amount">Amount:</label>
           <input type="number" id="amount" value={amount} onChange={handleAmountChange} />
         </div>
         <button type="submit">Lock Funds</button>
       </form>
-      <Transaction status={status} sender={account} receiver={address} />
-      <FAQ/>
-      <ChatWidget/>
+      <p>{status}</p>
     </div>
   );
 }

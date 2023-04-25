@@ -1,10 +1,10 @@
 
-div {
+div{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   
   h1 {
     font-size: 36px;
@@ -70,7 +70,7 @@ div {
     font-weight: 500;
   }
   
-  .TimeLock{
+  .TimeLockHeader{
     color:#0077B6;
     font-weight: 900;
   }

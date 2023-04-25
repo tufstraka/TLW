@@ -1,6 +1,7 @@
-import Timelock from './pages/timelock';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import ChatWidget from './components/chatWidget';
+import Home from './pages/home';
 import AboutUs from './components/Aboutus';
 import { Route, Routes } from 'react-router-dom';
 
@@ -12,9 +13,10 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Timelock />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-        </Routes>  
+        </Routes>
+        <ChatWidget />  
         <Footer />
       </div>
     </div>
