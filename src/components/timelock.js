@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import './timelock.css'
-import Web3 from 'web3';
-import TimeLockWallet from '../contracts/TimeLockWallet.json';
-import HowItWorks from './HowItWorks';
+import React, { useState, useEffect } from "react";
+import "./timelock.css";
+import Web3 from "web3";
+import TimeLockWallet from "../contracts/TimeLockWallet.json";
+import HowItWorks from "./HowItWorks";
 
 function Timelock() {
-  const [releaseTime, setReleaseTime] = useState('');
-  const [amount, setAmount] = useState('');
+  const [releaseTime, setReleaseTime] = useState("");
+  const [amount, setAmount] = useState("");
   const [contract, setContract] = useState(null);
   const [web3, setWeb3] = useState(null);
-  const [account, setAccount] = useState('');
-  const [address, setAddress] = useState('');
-  const [status, setStatus] = useState('');
+  const [account, setAccount] = useState("");
+  const [address, setAddress] = useState("");
+  const [status, setStatus] = useState("");
 
-  
   // Load Web3 on component mount
   useEffect(() => {
     async function loadWeb3() {
@@ -21,23 +20,19 @@ function Timelock() {
         window.web3 = new Web3(window.ethereum);
         await window.ethereum.enable();
         setWeb3(window.web3);
-
-      
       } else if (window.web3) {
         window.web3 = new Web3(window.web3.currentProvider);
         setWeb3(window.web3);
-
       } else {
-        alert('Please install Metamask to use this app.');
+        alert("Please install Metamask to use this app.");
       }
     }
 
     loadWeb3();
-    
   }, []);
-  
-    // ToDo: use a testnet for development
-    // Load TimeLockWallet contract on web3 instance update
+
+  // ToDo: use a testnet for development
+  // Load TimeLockWallet contract on web3 instance update
   useEffect(() => {
     async function loadContract() {
       const networkId = await web3.eth.net.getId();
@@ -45,21 +40,23 @@ function Timelock() {
 
       console.log(deployedNetwork);
       const contractAddress = deployedNetwork.address;
-      const contract = new web3.eth.Contract(TimeLockWallet.abi, contractAddress);
+      const contract = new web3.eth.Contract(
+        TimeLockWallet.abi,
+        contractAddress
+      );
       setContract(contract);
     }
 
     if (web3) {
-        loadContract();
+      loadContract();
     }
   }, [web3]);
-  
-    // Load account on web3 instance update
+
+  // Load account on web3 instance update
   useEffect(() => {
     async function loadAccount() {
       const accounts = await web3.eth.getAccounts();
       setAccount(accounts[0]);
-      
     }
 
     if (web3) {
@@ -92,8 +89,9 @@ function Timelock() {
 
     //Temporarily set status to pending while I work on the smart contract
 
-    setStatus(`Pending transaction... Amount: ${amountInWei} Wei || Receiver: ${address} || Release Time: ${releaseTime}`);
-
+    setStatus(
+      `Pending transaction... Amount: ${amountInWei} Wei || Receiver: ${address} || Release Time: ${releaseTime}`
+    );
 
     // TODO: Call the smart contract's sendFunds function
 
@@ -114,26 +112,45 @@ function Timelock() {
   }
 
   return (
-    <div className='TimeLockContainer'>
-      <h1><span className='TimeLockHeader'>Time Lock</span> Wallet</h1>
+    <div className="TimeLockContainer">
+      <h1>
+        <span className="TimeLockHeader">Time Lock</span> Wallet
+      </h1>
 
-      <div className='account'>
-        <p><span>Account - </span> {account}</p>
+      <div className="account">
+        <p>
+          <span>Account - </span> {account}
+        </p>
       </div>
-      <HowItWorks/>
+      <HowItWorks />
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="hodlerAddress">Address to send funds</label>
-          <input type="text" id="hodlerAddress" defaultValue={address} placeholder={address} />
+          <input
+            type="text"
+            id="hodlerAddress"
+            defaultValue={address}
+            placeholder={address}
+          />
           <button onClick={handleClick}>Generate address</button>
         </div>
         <div>
           <label htmlFor="releaseTime">Release date & time:</label>
-          <input type="datetime-local" id="releaseTime" value={releaseTime} onChange={handleReleaseTimeChange} />
+          <input
+            type="datetime-local"
+            id="releaseTime"
+            value={releaseTime}
+            onChange={handleReleaseTimeChange}
+          />
         </div>
         <div>
           <label htmlFor="amount">Amount:</label>
-          <input type="number" id="amount" value={amount} onChange={handleAmountChange} />
+          <input
+            type="number"
+            id="amount"
+            value={amount}
+            onChange={handleAmountChange}
+          />
         </div>
         <button type="submit">Lock Funds</button>
       </form>
