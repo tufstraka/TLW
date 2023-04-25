@@ -5,6 +5,7 @@ import TimeLockWallet from '../contracts/TimeLockWallet.json';
 import ChatWidget from '../components/chatWidget';
 import HowItWorks from '../components/HowItWorks';
 import FAQ from '../components/FAQ';
+import Transaction from '../components/Transaction';
 
 function Timelock() {
   const [releaseTime, setReleaseTime] = useState('');
@@ -13,8 +14,10 @@ function Timelock() {
   const [web3, setWeb3] = useState(null);
   const [account, setAccount] = useState('');
   const [address, setAddress] = useState('');
+  const [status, setStatus] = useState('');
 
-
+  
+  // Load Web3 on component mount
   useEffect(() => {
     async function loadWeb3() {
       if (window.ethereum) {
@@ -35,7 +38,8 @@ function Timelock() {
     loadWeb3();
     
   }, []);
-
+  
+    // Load TimeLockWallet contract on web3 instance update
   useEffect(() => {
     async function loadContract() {
       const networkId = await web3.eth.net.getId();
@@ -51,7 +55,8 @@ function Timelock() {
         loadContract();
     }
   }, [web3]);
-
+  
+    // Load account on web3 instance update
   useEffect(() => {
     async function loadAccount() {
       const accounts = await web3.eth.getAccounts();
@@ -90,7 +95,15 @@ function Timelock() {
     const tx = await contract.methods.sendFunds(address, releaseTime).send({
       from: account,
       value: amountInWei
-    });
+    }).on('transactionHash', (hash) => {
+        setStatus(`Transaction submitted: ${hash}`);
+  }) 
+    .on('receipt', (receipt) => {
+        setStatus(`Transaction confirmed: ${receipt.transactionHash}`);
+      })
+      .on('error', (error) => {
+        setStatus(`Transaction failed: ${error.message}`);
+      });
 
     console.log(tx);
   }
@@ -121,6 +134,7 @@ function Timelock() {
         </div>
         <button type="submit">Lock Funds</button>
       </form>
+      <Transaction status={status} sender={account} receiver={address} />
       <FAQ/>
       <ChatWidget/>
     </div>
