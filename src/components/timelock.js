@@ -12,6 +12,19 @@ function Timelock() {
   const [account, setAccount] = useState("");
   const [address, setAddress] = useState("");
   const [status, setStatus] = useState("");
+  
+  const options = {
+  weekday: 'long', 
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true 
+};
+  
+  const localTime = releaseTime.toLocaleString(options)
 
   // Load Web3 on component mount
   useEffect(() => {
@@ -90,7 +103,7 @@ function Timelock() {
     //Temporarily set status to pending while I work on the smart contract
 
     setStatus(
-      `Pending transaction... Amount: ${amountInWei} Wei || Receiver: ${address} || Release Time: ${releaseTime}`
+      `Pending transaction... Amount: ${amountInWei} Wei || Receiver: ${address} || Release Time: ${localTime}`
     );
 
     // TODO: Call the smart contract's sendFunds function
