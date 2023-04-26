@@ -34,8 +34,8 @@
 
   @media (max-width: 768px) {
     .faq-container {
-      width: 100%;
-      margin: 5px;
+      width: 80vw;
+      margin: 0;
       padding: 20px;
   
     }

@@ -9,5 +9,3 @@ This time lock wallet has several applications, including:
 - Pension or trust fund: Can be used to create a small pension fund or time-based savings account, preventing the owner from withdrawing any funds before a certain time in the future.
 
 - Gifting cryptocurrency: Can be used to create gifts for loved ones, allowing users to set up a wallet to gift cryptocurrency on a specific date or event. The private key and address of the wallet can be written down on a piece of paper and given to the person, who can then access the funds by calling a function on the contract once the specified time has elapsed.
-
-PS. It's not yet mobile friendly

@@ -11,6 +11,10 @@
     top: 0;
     z-index: 999;
   }
+
+  .mobilenav{
+    display: none
+  }
   
   .navbar h1 {
     margin: 17px;
@@ -35,4 +39,38 @@
   .nav-links li a:hover {
     color: #F8E71C;
   }
+
   
+  .nav-links-mobile{
+    display: none;
+  }
+
+  
+  @media (max-width: 768px){
+    .mobilenav{
+      display: block;
+      margin: 10px;
+    }
+
+    .navbar h1{
+      font-size: 25px;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+
+    /* TO DO: finish styling mobile navbar */
+    .nav-links-mobile.active {
+      position: fixed;
+      display: block;
+      background-color: black;
+      top: 41px;
+      right: 21px;
+      list-style: none;
+
+    }
+  
+    
+
+  }
