@@ -11,17 +11,17 @@ const LandingPage = () => {
       </div>
       <div className="features">
         <div className="feature">
-          <img src="/secure-pc-svgrepo-com.svg" alt="Secure Transactions" className="feature-icon" />
+          <img src="./secure-pc-svgrepo-com.svg" alt="Secure Transactions" className="feature-icon" />
           <h2 className="feature-title">Secure Transactions</h2>
           <p className="feature-description">Utilizing blockchain technology for secure and transparent transactions.</p>
         </div>
         <div className="feature">
-          <img src="/transfer-svgrepo-com.svg" alt="Fast Transactions" className="feature-icon" />
+          <img src="./transfer-svgrepo-com.svg" alt="Fast Transactions" className="feature-icon" />
           <h2 className="feature-title">Instant Transfers</h2>
           <p className="feature-description">Experience real-time transfers with low fees and no delays.</p>
         </div>
         <div className="feature">
-          <img src="/global-svgrepo-com.svg" alt="Global Reach" className="feature-icon" />
+          <img src="./global-svgrepo-com.svg" alt="Global Reach" className="feature-icon" />
           <h2 className="feature-title">Global Accessibility</h2>
           <p className="feature-description">Send and receive money worldwide, regardless of location.</p>
         </div>
