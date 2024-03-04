@@ -114,4 +114,10 @@
   .newsletter-button:hover {
     background-color: #218838;
   }
+
+@media only screen and (max-width: 767px) {
+    .features {
+    display: flex;
+    flex-direction: column; }
+}
   
