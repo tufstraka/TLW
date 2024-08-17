@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/timelock" element={<Home />} />
         </Routes>
         <ChatWidget />  
         <Footer />
