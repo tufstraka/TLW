@@ -1,47 +1,72 @@
 .about-us-container {
-    width: 90vw;
-    margin: 5px;
-    text-align: center;
-  }
-  
-  .about-us-container h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .about-us-container p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.about-us-container h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #1d72b8;
+}
+
+.about-us-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex: 1;
+  max-width: 220px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 100%;
+  border-bottom: 2px solid #1d72b8;
+}
+
+.team-member h3 {
+  margin: 15px 0;
+  font-size: 1.5em;
+  color: #1d72b8;
+}
+
+@media (max-width: 768px) {
   .team-members {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .team-member {
-    margin: 0 20px;
-    text-align: center;
+    max-width: 80%;
   }
-  
-  .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .team-member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  
-  .team-member p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 0;
-  }
-  
+}
