@@ -1,5 +1,5 @@
 import React from "react";
-import "./Aboutus.css"; // import relevant CSS file
+import "./Aboutus.css";
 
 const AboutUs = () => {
   return (
@@ -21,19 +21,24 @@ const AboutUs = () => {
       <div className="team-members">
         <div className="team-member">
           <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="John Doe" />
-          <h3>Msee flani</h3>
-          <p>Founder &amp; CEO</p>
-        {/*</div>
-        <div className="team-member">
-          <img src="/images/jane.jpg" alt="Jane Doe" />
-          <h3>Jane Doe</h3>
-          <p>Lead Designer</p>
+          <h3>Keith Kadima</h3>
         </div>
         <div className="team-member">
-          <img src="/images/bob.jpg" alt="Bob Smith" />
-          <h3>Bob Smith</h3>
-          <p>Lead Developer</p>
-        </div>*/}
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Jane Doe" />
+          <h3>James Gitere</h3>
+        </div>
+        <div className="team-member">
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
+          <h3>Shirleen</h3>
+        </div>
+                <div className="team-member">
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
+          <h3>Kevin Isom</h3>
+        </div>
+                <div className="team-member">
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
+          <h3>Doreen Nangira</h3>
+        </div>
   </div> 
     </div>
     </div>
