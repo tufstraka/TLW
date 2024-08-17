@@ -20,29 +20,29 @@ const AboutUs = () => {
       <h2>Meet Our Team</h2>
       <div className="team-members">
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="John Doe" />
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Keith Kadima" />
           <h3>Keith Kadima</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Jane Doe" />
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="James Gitere" />
           <h3>James Gitere</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
-          <h3>Shirleen</h3>
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Shirleen Odhiambo" />
+          <h3>Shirleen Odhiambo</h3>
         </div>
-                <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
+        <div className="team-member">
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Kevin Isom" />
           <h3>Kevin Isom</h3>
         </div>
-                <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Bob Smith" />
+        <div className="team-member">
+          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Doreen Nangira" />
           <h3>Doreen Nangira</h3>
         </div>
-  </div> 
-    </div>
+      </div> 
     </div>
   );
 };
 
 export default AboutUs;
+
