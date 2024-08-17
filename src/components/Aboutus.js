@@ -32,7 +32,7 @@ const AboutUs = () => {
           <h3>Shirleen Odhiambo</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Kevin Isom" />
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQELXdPv639O4w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1699938883733?e=1729123200&v=beta&t=Wko6XC-cPtNRi9aNO5oEv6NnCVvvbjtdxkRIK8mqSP4" alt="Kevin Isom" />
           <h3>Kevin Isom</h3>
         </div>
         <div className="team-member">
