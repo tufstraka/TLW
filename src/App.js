@@ -1,7 +1,7 @@
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import ChatWidget from './components/chatWidget';
-//import Home from './pages/home';
+import Home from './pages/home';
 import AboutUs from './components/Aboutus';
 import LandingPage from './components/LandingPage';
 import { Route, Routes } from 'react-router-dom';
