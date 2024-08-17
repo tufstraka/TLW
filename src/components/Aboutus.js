@@ -20,15 +20,15 @@ const AboutUs = () => {
       <h2>Meet Our Team</h2>
       <div className="team-members">
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Keith Kadima" />
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQG-QKBt32qAew/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723296535594?e=1729123200&v=beta&t=_jG9xZs6OGNV_ri2ZqFExc5YD7PCjwnMbYGYdNRUkJ4" alt="Keith Kadima" />
           <h3>Keith Kadima</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="James Gitere" />
+          <img src="https://media.licdn.com/dms/image/v2/C4D03AQFdUsMs4IdfpQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1624248708695?e=1729123200&v=beta&t=tV27Rw_Kd0OZlMv9vRRcQmmcI9tFCFXD2wSr-6LE41U" alt="James Gitere" />
           <h3>James Gitere</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Shirleen Odhiambo" />
+          <img src="https://shirlyneodhiambo.carrd.co/assets/images/image03.jpg?v=1a07be7b" alt="Shirleen Odhiambo" />
           <h3>Shirleen Odhiambo</h3>
         </div>
         <div className="team-member">
@@ -36,7 +36,7 @@ const AboutUs = () => {
           <h3>Kevin Isom</h3>
         </div>
         <div className="team-member">
-          <img src="https://i.pravatar.cc/150?u=a042581f4e29026023d" alt="Doreen Nangira" />
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHkGlxBiONJrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713343342317?e=1729123200&v=beta&t=CoZ55_NUb8mZC9znbt6CZYnRULxY5wqffjNOs4_xCjU" alt="Doreen Nangira" />
           <h3>Doreen Nangira</h3>
         </div>
       </div> 
