@@ -1,5 +1,5 @@
 import React from 'react';
-import { link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import './landingstyles.css'; 
 
 const LandingPage = () => {
@@ -8,8 +8,10 @@ const LandingPage = () => {
       <div className="hero">
         <h1 className="title">Welcome to Transpesa</h1>
         <p className="subtitle">Empowering Global Financial Freedom</p>
+    <Link to="/timelock">
         <button className="cta-button">Get Started</button>
-      </div>
+    </Link>
+    </div>
       <div className="features">
         <div className="feature">
           <img src="/secure-pc-svgrepo-com.svg" alt="Secure Transactions" className="feature-icon" />
