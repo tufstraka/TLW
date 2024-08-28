@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
+    background-color: #f7f9fc;
     color: #333;
 }
 
@@ -16,8 +16,8 @@ body {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #eaf2f8;
+    color: #2c3e50;
     border-radius: 10px;
     margin-bottom: 40px;
 }
@@ -26,16 +26,18 @@ body {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: #34495e;
 }
 
 .subtitle {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 30px;
+    color: #7f8c8d;
 }
 
 .cta-button {
-    background-color: #ff7f50;
+    background-color: #2980b9;
     color: white;
     font-size: 18px;
     padding: 12px 30px;
@@ -46,7 +48,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #ff5733;
+    background-color: #1c638d;
 }
 
 .features {
@@ -62,7 +64,7 @@ body {
     padding: 30px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     flex: 1;
     min-width: 280px;
 }
@@ -77,18 +79,19 @@ body {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #2c3e50;
 }
 
 .feature-description {
     font-size: 16px;
-    color: #666;
+    color: #7f8c8d;
 }
 
 .newsletter {
     text-align: center;
     padding: 50px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #eaf2f8;
+    color: #2c3e50;
     border-radius: 10px;
     margin-top: 60px;
 }
@@ -97,12 +100,14 @@ body {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
+    color: #34495e;
 }
 
 .newsletter-description {
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 30px;
+    color: #7f8c8d;
 }
 
 .newsletter-form {
@@ -126,7 +131,7 @@ body {
 }
 
 .newsletter-button {
-    background-color: #ff7f50;
+    background-color: #2980b9;
     color: white;
     font-size: 18px;
     padding: 10px 25px;
@@ -137,7 +142,21 @@ body {
 }
 
 .newsletter-button:hover {
-    background-color: #ff5733;
+    background-color: #1c638d;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #34495e;
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #bdc3c7;
 }
 
 @media only screen and (max-width: 767px) {
@@ -151,5 +170,6 @@ body {
         margin-bottom: 10px;
     }
 }
+
 
   
